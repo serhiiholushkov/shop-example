@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxtjs/seo'],
+  modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/fonts', '@nuxtjs/seo', '@nuxt/icon'],
   i18n: {
     locales: [{ code: 'en', name: 'English', file: 'en.json' }],
     defaultLocale: 'en',
@@ -18,4 +18,9 @@ export default defineNuxtConfig({
     ],
   },
   css: ['~/assets/css/app.css'],
+  icon: {
+    serverBundle: {
+      collections: ['mdi'],
+    },
+  },
 });
