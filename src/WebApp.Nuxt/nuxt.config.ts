@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/icon',
     '@vee-validate/nuxt',
+    '@vueuse/nuxt',
   ],
   i18n: {
     locales: [{ code: 'en', name: 'English', file: 'en.json' }],
