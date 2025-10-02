@@ -10,6 +10,9 @@
       <span>{{ t('welcome') }}</span>
     </div>
   </div>
+  <div>
+    <Button variant="secondary">Button</Button>
+  </div>
 </template>
 
 <script setup lang="ts">
