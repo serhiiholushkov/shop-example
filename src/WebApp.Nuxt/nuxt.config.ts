@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@vee-validate/nuxt',
     '@vueuse/nuxt',
+    '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
   ],
   i18n: {
     locales: [{ code: 'en', name: 'English', file: 'en.json' }],
@@ -30,5 +32,16 @@ export default defineNuxtConfig({
     serverBundle: {
       collections: ['mdi'],
     },
+  },
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui',
   },
 });
