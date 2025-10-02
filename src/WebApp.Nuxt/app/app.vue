@@ -10,7 +10,7 @@
       <span>{{ t('welcome') }}</span>
     </div>
   </div>
-  <div>
+  <div class="bg-gray-600">
     <Button variant="secondary">Button</Button>
   </div>
 </template>

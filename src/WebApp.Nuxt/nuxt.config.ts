@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/fonts',
     '@nuxtjs/seo',
-    '@nuxt/icon',
     '@vee-validate/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
@@ -28,11 +27,6 @@ export default defineNuxtConfig({
     ],
   },
   css: ['~/assets/css/app.css'],
-  icon: {
-    serverBundle: {
-      collections: ['mdi'],
-    },
-  },
   shadcn: {
     /**
      * Prefix for all the imported component
