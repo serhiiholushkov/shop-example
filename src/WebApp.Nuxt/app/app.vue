@@ -11,7 +11,7 @@
     </div>
   </div>
   <div>
-    <Button class="border-2 border-amber-400">Button</Button>
+    <Button variant="outline">Button</Button>
   </div>
 </template>
 
