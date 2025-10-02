@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       },
     ],
   },
-  css: ['~/assets/css/app.css'],
+  css: ['~/assets/css/tailwind.css', '~/assets/css/app.css'],
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -38,4 +38,5 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui',
   },
+  eslint: {},
 });

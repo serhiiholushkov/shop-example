@@ -1,3 +1,14 @@
-import withNuxt from './.nuxt/eslint.config.mjs';
+import { createConfigForNuxt } from '@nuxt/eslint-config';
 
-export default withNuxt();
+export default createConfigForNuxt({
+  // options here
+})
+  .prepend
+  // ...Prepend some flat configs in front
+  ()
+  // Override some rules in a specific config, based on their name
+  .override('nuxt/typescript', {
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  });
