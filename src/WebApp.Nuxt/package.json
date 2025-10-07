@@ -1,46 +1,35 @@
 {
-  "name": "nuxt-app",
+  "name": "WebApp-Nuxt",
   "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "prep": "nuxt prepare",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prep": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:prettier": "prettier . --check"
+    "lint:prettier": "prettier . --check",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.11.4",
-    "@nuxtjs/seo": "3.1.0",
-    "@nuxtjs/tailwindcss": "7.0.0-beta.0",
-    "@vee-validate/nuxt": "^4.15.1",
     "@vueuse/core": "^13.9.0",
     "@vueuse/nuxt": "^13.9.0",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-vue-next": "^0.544.0",
     "nuxt": "^4.1.2",
-    "reka-ui": "^2.5.1",
-    "shadcn-nuxt": "2.2.0",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.14",
-    "tw-animate-css": "^1.4.0",
-    "vue": "^3.5.21",
+    "vue": "^3.5.22",
     "vue-router": "^4.5.1"
   },
-  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
   "devDependencies": {
     "@nuxt/eslint": "^1.9.0",
     "@nuxtjs/i18n": "^10.1.0",
-    "eslint": "^9.36.0",
+    "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
