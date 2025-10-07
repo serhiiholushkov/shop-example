@@ -1,21 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/fonts', '@vueuse/nuxt'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n', '@vueuse/nuxt'],
+
+  devtools: {
+    enabled: true,
+  },
+
   css: ['~/assets/css/main.css'],
+
+  routeRules: {
+    '/': { prerender: true },
+  },
+
+  compatibilityDate: '2025-01-15',
+
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs',
+      },
+    },
+  },
+
   i18n: {
     locales: [{ code: 'en', name: 'English', file: 'en.json' }],
     defaultLocale: 'en',
     langDir: 'locales/',
-  },
-  fonts: {
-    families: [
-      {
-        name: 'Open Sans',
-        provider: 'google',
-        weights: [300, 400, 500, 700, 900],
-      },
-    ],
   },
 });
