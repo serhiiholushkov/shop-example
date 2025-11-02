@@ -1,12 +1,20 @@
 ﻿using shop.Core.ContributorAggregate;
+using shop.Infrastructure.Data.Converters;
 
 namespace shop.Infrastructure.Data;
+
 public class AppDbContext(DbContextOptions<AppDbContext> options,
   IDomainEventDispatcher? dispatcher) : DbContext(options)
 {
   private readonly IDomainEventDispatcher? _dispatcher = dispatcher;
 
   public DbSet<Contributor> Contributors => Set<Contributor>();
+
+  protected override void ConfigureConventions(ModelConfigurationBuilder builder)
+  {
+    builder.Properties<DateTime>().HaveConversion<DateTimeUtcConverter>();
+    builder.Properties<DateTime?>().HaveConversion<NullableDateTimeUtcConverter>();
+  }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {

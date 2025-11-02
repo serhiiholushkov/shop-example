@@ -11,6 +11,6 @@ public class Product
   public int AvailableItemsInStock { get; set; }
 
   public int CategoryId { get; set; }
-  public ProductCategory? Category { get; set; }
-  public List<ProductReview> Reviews { get; set; } = [];
+  public ProductCategory Category { get; set; } = default!;
+  public ICollection<ProductReview> Reviews { get; set; } = [];
 }

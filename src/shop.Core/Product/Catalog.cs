@@ -2,6 +2,6 @@ namespace shop.Core.Product;
 
 public class Catalog
 {
-  public List<Product> Products { get; set; } = [];
-  public List<ProductCategory> Categories { get; set; } = [];
+  public ICollection<Product> Products { get; set; } = [];
+  public ICollection<ProductCategory> Categories { get; set; } = [];
 }
