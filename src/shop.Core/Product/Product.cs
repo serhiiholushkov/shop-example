@@ -1,8 +1,7 @@
 namespace shop.Core.Product;
 
-public class Product
+public class Product : EntityBase<int>, IAggregateRoot
 {
-  public int Id { get; set; }
   public required string Name { get; set; }
   public string? Description { get; set; }
   public decimal Price { get; set; }

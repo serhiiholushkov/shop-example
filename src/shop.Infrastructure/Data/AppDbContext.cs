@@ -1,5 +1,4 @@
-﻿using shop.Core.ContributorAggregate;
-using shop.Core.Product;
+﻿using shop.Core.Product;
 using shop.Infrastructure.Data.Converters;
 
 namespace shop.Infrastructure.Data;
@@ -8,8 +7,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options,
   IDomainEventDispatcher? dispatcher) : DbContext(options)
 {
   private readonly IDomainEventDispatcher? _dispatcher = dispatcher;
-
-  public DbSet<Contributor> Contributors => Set<Contributor>();
 
   public DbSet<ProductCategory> ProductCategories => Set<ProductCategory>();
   public DbSet<Product> Products => Set<Product>();

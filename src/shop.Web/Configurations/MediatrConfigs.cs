@@ -1,7 +1,5 @@
 ﻿using Ardalis.SharedKernel;
-using shop.Core.ContributorAggregate;
-using shop.UseCases.Contributors.Create;
-using MediatR;
+using shop.Core.Product;
 using System.Reflection;
 
 namespace shop.Web.Configurations;
@@ -12,8 +10,8 @@ public static class MediatrConfigs
   {
     var mediatRAssemblies = new[]
       {
-        Assembly.GetAssembly(typeof(Contributor)), // Core
-        Assembly.GetAssembly(typeof(CreateContributorCommand)) // UseCases
+        Assembly.GetAssembly(typeof(Product)), // Core
+        // TODO: UseCases
       };
 
     services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(mediatRAssemblies!))

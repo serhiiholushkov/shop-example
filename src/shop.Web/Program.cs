@@ -1,5 +1,4 @@
-﻿using shop.UseCases.Contributors.Create;
-using shop.Web.Configurations;
+﻿using shop.Web.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +25,7 @@ builder.Services.AddFastEndpoints()
                 })
                 .AddCommandMiddleware(c =>
                 {
-                  c.Register(typeof(CommandLogger<,>));
+                  // c.Register(typeof(CommandLogger<,>));
                 });
 
 // wire up commands

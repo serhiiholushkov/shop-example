@@ -1,11 +1,8 @@
-﻿using shop.Core.Interfaces;
-using shop.Core.Services;
-using shop.Infrastructure.Data;
-using shop.Infrastructure.Data.Queries;
-using shop.UseCases.Contributors.List;
+﻿using shop.Infrastructure.Data;
 
 
 namespace shop.Infrastructure;
+
 public static class InfrastructureServiceExtensions
 {
   public static IServiceCollection AddInfrastructureServices(
@@ -19,10 +16,7 @@ public static class InfrastructureServiceExtensions
      options.UseSqlite(connectionString));
 
     services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
-           .AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>))
-           .AddScoped<IListContributorsQueryService, ListContributorsQueryService>()
-           .AddScoped<IDeleteContributorService, DeleteContributorService>();
-
+           .AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>));
 
     logger.LogInformation("{Project} services registered", "Infrastructure");
 
