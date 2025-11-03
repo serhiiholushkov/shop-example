@@ -18,11 +18,11 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         .HasMaxLength(DataSchemaConstants.DEFAULT_DESCRIPTION_LENGTH);
 
     builder.Property(p => p.Price)
-        .HasColumnType("decimal(18,2)")
+        .HasPrecision(18, 2)
         .IsRequired();
 
     builder.HasOne(p => p.Category)
-        .WithMany()
+        .WithMany(pc => pc.Products)
         .HasForeignKey(p => p.CategoryId)
         .IsRequired();
   }

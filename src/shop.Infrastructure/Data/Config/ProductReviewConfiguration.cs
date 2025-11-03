@@ -18,5 +18,10 @@ public class ProductReviewConfiguration : IEntityTypeConfiguration<ProductReview
 
     builder.Property(pr => pr.Created)
         .IsRequired();
+
+    builder.HasOne(pr => pr.Product)
+        .WithMany(p => p.Reviews)
+        .HasForeignKey(pr => pr.ProductId)
+        .IsRequired();
   }
 }
