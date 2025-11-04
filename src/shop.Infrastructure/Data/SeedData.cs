@@ -1,4 +1,5 @@
 ﻿using shop.Core.Product;
+using shop.Core.Shared;
 
 namespace shop.Infrastructure.Data;
 
@@ -24,7 +25,7 @@ public static class SeedData
     {
       Name = "Smartphone",
       Description = "6.1-inch display",
-      Price = 699m,
+      Price = new Price(699m),
       AvailableItemsInStock = 50,
       Category = electronics
     };
@@ -33,7 +34,7 @@ public static class SeedData
     {
       Name = "Laptop",
       Description = "Lightweight, 16GB RAM",
-      Price = 1299m,
+      Price = new Price(1299m),
       AvailableItemsInStock = 25,
       Category = electronics
     };
@@ -42,7 +43,7 @@ public static class SeedData
     {
       Name = "Novel",
       Description = "Bestselling fiction",
-      Price = 14.99m,
+      Price = new Price(14.99m),
       AvailableItemsInStock = 100,
       Category = books
     };

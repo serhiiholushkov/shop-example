@@ -17,9 +17,16 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
     builder.Property(p => p.Description)
         .HasMaxLength(DataSchemaConstants.DEFAULT_DESCRIPTION_LENGTH);
 
-    builder.Property(p => p.Price)
-        .HasPrecision(18, 2)
-        .IsRequired();
+    builder.OwnsOne(p => p.Price, priceBuilder =>
+    {
+      priceBuilder.Property(p => p.Amount)
+          .HasPrecision(18, 2)
+          .IsRequired();
+
+      priceBuilder.Property(p => p.Currency)
+          .HasMaxLength(3)
+          .IsRequired();
+    });
 
     builder.HasOne(p => p.Category)
         .WithMany(pc => pc.Products)

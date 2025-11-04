@@ -1,10 +1,12 @@
+using shop.Core.Shared;
+
 namespace shop.Core.Product;
 
 public class Product : EntityBase<int>, IAggregateRoot
 {
   public required string Name { get; set; }
   public string? Description { get; set; }
-  public decimal Price { get; set; }
+  public Price Price { get; set; } = new Price();
 
   // Quantity available in stock
   public int AvailableItemsInStock { get; set; }
