@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" />
+    <PackageReference Include="Aspire.Hosting.PostgreSQL" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,7 +24,7 @@
         reference as a standard project reference and not attempt to generate
         a metadata file -->
     <ProjectReference Include="..\shop.ServiceDefaults\shop.ServiceDefaults.csproj"
-                      IsAspireProjectResource="false" />
+      IsAspireProjectResource="false" />
   </ItemGroup>
 
 </Project>
